@@ -6,7 +6,7 @@
     <title>Recruitment Advertisement - Project Associate - I (PA-I) | IIT Indore</title>
     <style>
         /* Minimalist, Official Black & White Styling */
-        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif+Devanagari:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
         :root {
             --bg-color: #ffffff;
@@ -14,6 +14,7 @@
             --border-color: #000000;
             --border-light: #cccccc;
             --font-serif: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+            --font-hindi: 'Noto Serif Devanagari', 'Mangal', 'Devanagari MT', serif;
             --font-sans: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
@@ -36,43 +37,101 @@
             max-width: 850px;
             margin: 0 auto;
             border: 2px solid var(--border-color);
-            padding: 40px 48px;
+            padding: 36px 44px;
             background: #fff;
         }
 
-        /* Header */
-        header {
-            text-align: center;
+        /* Official Letterhead Header */
+        header.doc-header {
+            margin-bottom: 20px;
+        }
+
+        .letterhead-top {
+            display: flex;
+            align-items: center;
+            gap: 24px;
             border-bottom: 2px solid var(--border-color);
-            padding-bottom: 18px;
-            margin-bottom: 24px;
+            padding-bottom: 16px;
+            margin-bottom: 18px;
         }
 
-        header h1 {
-            font-family: var(--font-serif);
-            font-size: 20px;
+        .logo-box {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-box img.iiti-logo {
+            width: 90px;
+            height: auto;
+            max-height: 95px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .letterhead-text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hindi-section {
+            font-family: var(--font-hindi);
+            line-height: 1.35;
+        }
+
+        .hindi-section .dept-hi {
+            font-size: 14px;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            margin-bottom: 6px;
+            letter-spacing: 0.2px;
         }
 
-        header .sub-header {
-            font-size: 13px;
-            line-height: 1.4;
-            margin-bottom: 14px;
+        .hindi-section .inst-hi {
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
         }
 
-        header .advt-title {
+        .hindi-section .addr-hi {
+            font-size: 12.5px;
+            font-weight: 400;
+        }
+
+        .english-section {
+            margin-top: 6px;
+            line-height: 1.35;
+        }
+
+        .english-section .dept-en {
+            font-size: 13.5px;
+            font-weight: 700;
+            text-transform: capitalize;
+        }
+
+        .english-section .inst-en {
             font-family: var(--font-serif);
             font-size: 15px;
             font-weight: 700;
-            display: inline-block;
+        }
+
+        .english-section .addr-en {
+            font-size: 12.5px;
+            color: #111;
+        }
+
+        .advt-header-title {
+            text-align: center;
+            font-family: var(--font-serif);
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
             border-top: 1px solid var(--border-color);
             border-bottom: 1px solid var(--border-color);
-            padding: 4px 14px;
-            letter-spacing: 0.4px;
-            text-transform: uppercase;
+            padding: 6px 14px;
+            margin-bottom: 18px;
         }
 
         /* Meta Bar (Advt No & Date) */
@@ -212,14 +271,26 @@
 <body>
 
 <div class="document-container">
-    <header>
-        <h1>Indian Institute of Technology Indore</h1>
-        <div class="sub-header">
-            Department of Physics &bull; Interdisciplinary Area of Quantum Computing (IAQC)<br>
-            Khandwa Road, Simrol, Indore – 453552, Madhya Pradesh, India
+    <header class="doc-header">
+        <div class="letterhead-top">
+            <div class="logo-box">
+                <img src="image1.png" alt="IIT Indore Logo" class="iiti-logo">
+            </div>
+            <div class="letterhead-text">
+                <div class="hindi-section">
+                    <div class="dept-hi">अनुसंधान और विकास अनुभाग</div>
+                    <div class="inst-hi">भारतीय प्रौद्योगिकी संस्थान इंदौर</div>
+                    <div class="addr-hi">खंडवा रोड, सिमरोल, इंदौर – 453552, भारत</div>
+                </div>
+                <div class="english-section">
+                    <div class="dept-en">Research &amp; Development Section</div>
+                    <div class="inst-en">Indian Institute of Technology Indore</div>
+                    <div class="addr-en">Khandwa Road, Simrol, Indore 453552, India</div>
+                </div>
+            </div>
         </div>
-        <div class="advt-title">
-            Advertisement for Recruitment of Project Associate – I (PA-I)
+        <div class="advt-header-title">
+            Advertisement for Recruitment of Project Associate - I (PA-I)
         </div>
     </header>
 
